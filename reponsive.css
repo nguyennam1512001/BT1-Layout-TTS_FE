@@ -1,9 +1,11 @@
 @media (min-width: 992px) {
-    
+    .mobile{display: block;}
 }
   
 /* mobile */
 @media (max-width: 991px) {
+    .mobile{display: none;}
+
     header{
         height: 200px;
     }
