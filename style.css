@@ -120,11 +120,35 @@ header{
     font-weight: 700;
 }
 
-.redirect-link{
-    margin-left: 40px;
+.next-link{
+    text-align: center;
+    position: fixed;
+    top: 5px;
+    right: 5px;
+}
+.next-link a{
+    display: inline-block;
+    color: #fff;
+    font-size: 2rem;
+    background-color: #00e0ff;
+    padding: 0 10px;
+    border-radius: 50px;
 }
 
-
+.prev-link{
+    text-align: center;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+}
+.prev-link a{
+    display: inline-block;
+    color: #fff;
+    font-size: 2rem;
+    background-color: #00e0ff;
+    padding: 0 10px;
+    border-radius: 50px;
+}
 
 /* index2 ======================*/
 
