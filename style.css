@@ -4,6 +4,10 @@
     box-sizing: border-box;
     word-break: break-all;
 }
+.hr{
+    border: 4px solid #000;
+    margin: 40px 0;
+}
 
 @font-face {
     font-family: 'SF Pro Text Regular';
@@ -63,7 +67,9 @@ header{
 }
 .readme{
     font-size: 200px;
-
+}
+.readme strong{
+    word-break: break-word;
 }
 
 .content{

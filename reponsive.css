@@ -4,16 +4,22 @@
   
 /* mobile */
 @media (max-width: 991px) {
+    header{
+        height: 200px;
+    }
     .header{
         width: 90%;
     }
     .readme{
-        font-size: 100px;
-    
+        font-size: 80px;
+    }
+    .readme strong{
+
     }
 
     .content{
         width: 90%;
+        margin-top: 40px;
     }
     .title{
         font-size: 30px;
