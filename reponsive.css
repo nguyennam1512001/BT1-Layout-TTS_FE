@@ -185,4 +185,9 @@
     .signup-title{
         font-size: 29px;
     }
+
+    .prev-link a, .next-link a {
+        padding: 0 8px;
+        font-size: 1rem;
+    }
 }
