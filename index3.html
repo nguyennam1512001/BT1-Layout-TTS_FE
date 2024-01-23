@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TTS</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Victor+Mono:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="reponsive.css">
+    </head>
+    <body>
+        <div class="header2">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="397" height="39" viewBox="0 0 397 39" fill="none">
+                    <path d="M1.46398 32H15.588V31.252L11.012 30.68C9.69198 30.504 8.72399 29.492 8.72399 28.128V7.05204L26.896 32H28.656V4.98404C28.656 3.66404 29.58 2.56404 30.9 2.38804L34.244 1.94804V1.20004H20.164V1.94804L24.74 2.52004C26.06 2.69604 27.028 3.70804 27.028 5.07204V25.4L12.772 5.55604C9.82399 1.42004 6.74398 1.20004 0.583984 1.20004V1.94804C3.26798 2.34404 5.90798 3.35604 7.05199 5.38004V28.216C7.05199 29.536 6.12798 30.636 4.80798 30.812L1.46398 31.252V32Z" fill="black"/>
+                    <path d="M59.059 32.704C68.387 32.704 75.295 26.192 75.295 16.6C75.295 7.00804 68.387 0.540039 59.059 0.540039C49.7309 0.540039 42.779 7.00804 42.779 16.6C42.779 26.192 49.7309 32.704 59.059 32.704ZM59.103 31.164C51.007 31.164 47.443 24.168 47.443 15.588C47.443 7.58004 51.183 2.08004 59.015 2.08004C66.935 2.08004 70.587 8.94404 70.587 17.26C70.587 25.532 67.243 31.164 59.103 31.164Z" fill="black"/>
+                    <path d="M98.3437 17.128H99.1357C103.668 29.668 111.412 35.3 115.856 38.072C109.608 29.536 106.396 23.904 103.536 16.732C108.904 15.808 111.852 13.3 111.852 8.94404C111.852 3.40004 106.836 1.20004 97.9037 1.20004H84.7037V1.94804L87.5197 2.30004C88.8397 2.47604 89.8077 3.48804 89.8077 4.85204V28.348C89.8077 29.712 88.8397 30.724 87.5197 30.9L84.7037 31.252V32H99.2677V31.252L96.4517 30.9C95.1317 30.724 94.1637 29.712 94.1637 28.348V17.128H98.3437ZM94.1637 2.74004H99.0037C104.988 2.74004 107.672 4.80804 107.672 9.16404C107.672 13.52 104.68 15.588 98.2997 15.588H94.1637V2.74004Z" fill="black"/>
+                    <path d="M123.883 32H138.007C148.919 32 155.915 26.456 155.915 16.688C155.915 6.43604 148.919 1.20004 138.007 1.20004H123.883V1.94804L126.699 2.30004C128.019 2.47604 128.987 3.48804 128.987 4.85204V28.348C128.987 29.712 128.019 30.724 126.699 30.9L123.883 31.252V32ZM135.631 30.46C134.311 30.46 133.343 29.712 133.343 28.348V2.74004H137.655C144.343 2.74004 151.251 5.51204 151.251 16.688C151.251 27.028 145.135 30.46 137.655 30.46H135.631Z" fill="black"/>
+                    <path d="M165.597 32H180.161V31.252L177.345 30.9C176.025 30.724 175.057 29.712 175.057 28.348V4.85204C175.057 3.48804 176.025 2.47604 177.345 2.30004L180.161 1.94804V1.20004H165.597V1.94804L168.413 2.30004C169.733 2.47604 170.701 3.48804 170.701 4.85204V28.348C170.701 29.712 169.733 30.724 168.413 30.9L165.597 31.252V32Z" fill="black"/>
+                    <path d="M206.292 32.66C211.396 32.66 216.852 30.724 220.416 27.38V25.048C216.984 28.26 212.276 29.888 207.612 29.888C200.704 29.888 195.028 24.872 195.028 16.6C195.028 7.93204 198.988 2.08004 206.292 2.08004C213.596 2.08004 216.412 7.49204 215.444 16.996H216.5L219.14 5.24804C216.632 2.38804 209.812 0.540039 206.292 0.540039C196.656 0.540039 190.144 7.00804 190.144 16.6C190.144 26.236 196.7 32.66 206.292 32.66Z" fill="black"/>
+                    <path d="M263.086 17.128H263.878C268.41 29.668 276.154 35.3 280.598 38.072C274.35 29.536 271.138 23.904 268.278 16.732C273.646 15.808 276.594 13.3 276.594 8.94404C276.594 3.40004 271.578 1.20004 262.646 1.20004H249.446V1.94804L252.262 2.30004C253.582 2.47604 254.55 3.48804 254.55 4.85204V28.348C254.55 29.712 253.582 30.724 252.262 30.9L249.446 31.252V32H264.01V31.252L261.194 30.9C259.874 30.724 258.906 29.712 258.906 28.348V17.128H263.086ZM258.906 2.74004H263.746C269.73 2.74004 272.414 4.80804 272.414 9.16404C272.414 13.52 269.422 15.588 263.042 15.588H258.906V2.74004Z" fill="black"/>
+                    <path d="M304.608 32.704C313.936 32.704 320.844 26.192 320.844 16.6C320.844 7.00804 313.936 0.540039 304.608 0.540039C295.28 0.540039 288.328 7.00804 288.328 16.6C288.328 26.192 295.28 32.704 304.608 32.704ZM304.652 31.164C296.556 31.164 292.992 24.168 292.992 15.588C292.992 7.58004 296.732 2.08004 304.564 2.08004C312.484 2.08004 316.136 8.94404 316.136 17.26C316.136 25.532 312.792 31.164 304.652 31.164Z" fill="black"/>
+                    <path d="M344.885 32.66C351.485 32.66 356.149 29.316 356.149 24.476C356.149 12.64 337.933 14.048 337.933 7.49204C337.933 4.36804 341.101 2.08004 345.809 2.08004C351.221 2.08004 353.245 4.98404 353.773 12.64H354.785L355.225 2.65204C352.629 1.50804 349.329 0.540039 345.809 0.540039C338.945 0.540039 334.677 3.62004 334.677 7.93204C334.677 19.416 352.981 17.612 352.981 25.136C352.981 28.656 349.373 31.12 345.325 31.12C339.649 31.12 337.361 28.084 336.305 19.372H335.293L334.413 29.8C337.449 31.472 340.265 32.66 344.885 32.66Z" fill="black"/>
+                    <path d="M367.155 32H395.095L396.414 21.616H395.667C392.983 28.568 391.135 30.46 387.219 30.46H378.902C377.582 30.46 376.615 29.712 376.615 28.348V17.128H386.954C388.142 17.128 389.33 17.964 389.418 19.108L389.902 24.256H390.651V8.90004H389.902L389.418 13.608C389.286 14.796 388.142 15.588 386.954 15.588H376.615V2.74004H386.339C389.595 2.74004 392.41 4.28004 394.171 11.628H394.918L394.039 1.20004H367.155V1.94804L369.97 2.30004C371.29 2.47604 372.259 3.48804 372.259 4.85204V28.348C372.259 29.712 371.29 30.724 369.97 30.9L367.155 31.252V32Z" fill="black"/>
+                </svg>
+            </div>
+            <div class="header-nav">
+                <div class="nav-item active">BLOG</div>
+                <div class="nav-item">ABOUT</div>
+                <div class="nav-item">LINKS</div>
+                <div class="nav-item">PROJECTS</div>
+            </div>
+            <div class="header-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="15" viewBox="0 0 24 15" fill="none">
+                    <line y1="0.5" x2="24" y2="0.5" stroke="black"/>
+                    <line y1="7.5" x2="24" y2="7.5" stroke="black"/>
+                    <line y1="14.5" x2="24" y2="14.5" stroke="black"/>
+                </svg>
+            </div>
+
+        </div>
+        <div>
+            <div class="content3">
+                <div class="content-title ">
+                    A few words about this blog platform, Ghost, and how this site was made
+                </div>
+                <div class="content-subtitle index3">
+                    Why Ghost (& Figma) instead of Medium, WordPress or other options?
+                </div>
+                <img class="img-banner html3" src="./image/image2.png" alt="">
+
+                <div class="blog-html3">
+                    <div class="author">
+                        <div class="author-profile">
+                            <img class="author-img" src="./image/author.png" alt="author">
+                            <div class="author-infor">
+                                <p class="author-name">Mika Matikainen</p>
+                                <p class="author-time">Apr 15, 2020 · 4 min read</p>
+                            </div>
+                        </div>
+                        <div class="author-contact">
+                            <div class="icon facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <g clip-path="url(#clip0_5_3)">
+                                        <path d="M10.0001 0.041626C4.47724 0.041626 0 4.51886 0 10.0417C0 14.995 3.60522 19.0972 8.33225 19.8916V12.128H5.91994V9.33417H8.33225V7.27413C8.33225 4.88389 9.79213 3.58135 11.9247 3.58135C12.9461 3.58135 13.8238 3.65746 14.0786 3.69098V6.18942L12.5995 6.19013C11.44 6.19013 11.2165 6.74102 11.2165 7.54969V9.33274H13.9832L13.6223 12.1265H11.2165V19.9584C16.1642 19.3562 20 15.1495 20 10.0388C20 4.51886 15.5228 0.041626 10.0001 0.041626Z" fill="#010002"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_5_3">
+                                        <rect width="20" height="20" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="icon twitter">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
+                                    <path d="M19.6169 0.00896646C18.763 0.611275 17.8176 1.07195 16.8171 1.37324C16.28 0.755757 15.5663 0.318104 14.7725 0.119469C13.9786 -0.0791667 13.1429 -0.0292013 12.3784 0.262607C11.6138 0.554416 10.9573 1.07399 10.4977 1.75105C10.0381 2.42812 9.7975 3.23001 9.80847 4.04827V4.93995C8.24146 4.98058 6.68873 4.63305 5.28855 3.92829C3.88838 3.22354 2.68424 2.18345 1.78336 0.900645C1.78336 0.900645 -1.78336 8.92575 6.24175 12.4925C4.40536 13.739 2.21775 14.364 0 14.2758C8.02511 18.7342 17.8336 14.2758 17.8336 4.02152C17.8328 3.77315 17.8089 3.52539 17.7622 3.28143C18.6723 2.38395 19.3145 1.25082 19.6169 0.00896646Z" fill="black"/>
+                                </svg>
+                            </div>
+                            <div class="icon message">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M17.077 2.928C15.191 1.041 12.683 0.001 10.011 0C4.505 0 0.0240001 4.479 0.0220001 9.985C0.0210001 11.745 0.481 13.463 1.355 14.977L0 20L5.233 18.763C6.692 19.559 8.334 19.978 10.006 19.979H10.01C15.515 19.979 19.996 15.499 19.999 9.994C20.001 7.325 18.963 4.816 17.077 2.928ZM14.898 13.554C14.69 14.137 13.671 14.699 13.213 14.74C12.755 14.782 12.326 14.947 10.218 14.116C7.681 13.116 6.079 10.515 5.955 10.349C5.83 10.182 4.936 8.996 4.936 7.768C4.936 6.54 5.581 5.936 5.81 5.687C6.039 5.437 6.309 5.375 6.476 5.375C6.642 5.375 6.809 5.375 6.954 5.381C7.132 5.388 7.329 5.397 7.516 5.812C7.738 6.306 8.223 7.54 8.285 7.665C8.347 7.79 8.389 7.936 8.306 8.102C8.223 8.268 8.181 8.372 8.057 8.518C7.932 8.664 7.795 8.843 7.683 8.955C7.558 9.079 7.428 9.215 7.573 9.464C7.719 9.714 8.219 10.531 8.961 11.192C9.915 12.042 10.718 12.305 10.968 12.431C11.218 12.556 11.363 12.535 11.509 12.368C11.655 12.202 12.133 11.64 12.299 11.39C12.465 11.14 12.632 11.182 12.861 11.265C13.09 11.348 14.317 11.952 14.566 12.077C14.816 12.202 14.982 12.264 15.044 12.368C15.106 12.471 15.106 12.971 14.898 13.554Z" fill="black"/>
+                                    </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Duis eu velit tempus erat egestas efficitur. In hac habitasse platea dictumst. 
+                        Fusce a nunc eget ligula suscipit finibus. Aenean pharetra quis lacus at viverra. 
+                    </div>
+                    <div class="paragraph">
+                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+                        Aliquam quis posuere ligula. In eu dui molestie, molestie lectus eu, semper lectus. 
+                    </div>
+                    <div class="paragraph-title">Next on the pipeline</div>
+                    <div class="paragraph">
+                        Duis eu velit tempus erat egestas efficitur. In hac habitasse platea dictumst. 
+                        Fusce a nunc eget ligula suscipit finibus. Aenean pharetra quis lacus at viverra. 
+                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+                    </div>
+                    <div class="paragraph">
+                        Morbi efficitur auctor metus, id mollis lorem pellentesque id. 
+                        Nullam posuere maximus dui et fringilla. 
+                    </div>
+                    <img class="blog-img" src="./image/paragraph.png" alt="">
+                    <div class="img-caption">
+                        Image caption centered this way and I’ll make this a bit longer  to indicate the amount of line-height. 
+                    </div>
+                    <div class="paragraph">
+                        Aenean pharetra quis lacus at viverra. 
+                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+                        Aliquam quis posuere ligula.  
+                    </div>
+                    <div class="paragraph">
+                        In eu dui molestie, molestie lectus eu, semper lectus. 
+                        Proin at justo lacinia, auctor nisl et, consequat ante. Donec sit amet nisi arcu. 
+                        Morbi efficitur auctor metus, id mollis lorem pellentesque id. 
+                        Nullam posuere maximus dui et fringilla. Nulla non volutpat leo.
+                    </div>
+                    <div class="paragraph">A list looks like this:</div>
+                    <div class="paragraph-li"><div class="rhombus"></div>First item in the list</div>
+                    <div class="paragraph-li"><div class="rhombus"></div>Second item in the list lorem ipsum dolor sit amet nunc felis dolor lorem ipsum sit amet</div>
+                    <div class="paragraph-li"><div class="rhombus"></div>Third item in the list</div>
+                    <div class="paragraph">
+                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam quis posuere ligula. 
+                    </div>
+                    <div class="paragraph">
+                        Thanks for reading, <br/>
+                        Mika
+                    </div>
+                    <div class="share">
+                        Share:
+                        <div class="author-contact">
+                            <div class="icon facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <g clip-path="url(#clip0_5_3)">
+                                        <path d="M10.0001 0.041626C4.47724 0.041626 0 4.51886 0 10.0417C0 14.995 3.60522 19.0972 8.33225 19.8916V12.128H5.91994V9.33417H8.33225V7.27413C8.33225 4.88389 9.79213 3.58135 11.9247 3.58135C12.9461 3.58135 13.8238 3.65746 14.0786 3.69098V6.18942L12.5995 6.19013C11.44 6.19013 11.2165 6.74102 11.2165 7.54969V9.33274H13.9832L13.6223 12.1265H11.2165V19.9584C16.1642 19.3562 20 15.1495 20 10.0388C20 4.51886 15.5228 0.041626 10.0001 0.041626Z" fill="#010002"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_5_3">
+                                        <rect width="20" height="20" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <p>Share on Facebook</p>
+                            </div>
+                            <div class="icon twitter">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
+                                    <path d="M19.6169 0.00896646C18.763 0.611275 17.8176 1.07195 16.8171 1.37324C16.28 0.755757 15.5663 0.318104 14.7725 0.119469C13.9786 -0.0791667 13.1429 -0.0292013 12.3784 0.262607C11.6138 0.554416 10.9573 1.07399 10.4977 1.75105C10.0381 2.42812 9.7975 3.23001 9.80847 4.04827V4.93995C8.24146 4.98058 6.68873 4.63305 5.28855 3.92829C3.88838 3.22354 2.68424 2.18345 1.78336 0.900645C1.78336 0.900645 -1.78336 8.92575 6.24175 12.4925C4.40536 13.739 2.21775 14.364 0 14.2758C8.02511 18.7342 17.8336 14.2758 17.8336 4.02152C17.8328 3.77315 17.8089 3.52539 17.7622 3.28143C18.6723 2.38395 19.3145 1.25082 19.6169 0.00896646Z" fill="black"/>
+                                </svg>
+                                <p>Share on Twitter</p>
+                            </div>
+                            <div class="icon message">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M17.077 2.928C15.191 1.041 12.683 0.001 10.011 0C4.505 0 0.0240001 4.479 0.0220001 9.985C0.0210001 11.745 0.481 13.463 1.355 14.977L0 20L5.233 18.763C6.692 19.559 8.334 19.978 10.006 19.979H10.01C15.515 19.979 19.996 15.499 19.999 9.994C20.001 7.325 18.963 4.816 17.077 2.928ZM14.898 13.554C14.69 14.137 13.671 14.699 13.213 14.74C12.755 14.782 12.326 14.947 10.218 14.116C7.681 13.116 6.079 10.515 5.955 10.349C5.83 10.182 4.936 8.996 4.936 7.768C4.936 6.54 5.581 5.936 5.81 5.687C6.039 5.437 6.309 5.375 6.476 5.375C6.642 5.375 6.809 5.375 6.954 5.381C7.132 5.388 7.329 5.397 7.516 5.812C7.738 6.306 8.223 7.54 8.285 7.665C8.347 7.79 8.389 7.936 8.306 8.102C8.223 8.268 8.181 8.372 8.057 8.518C7.932 8.664 7.795 8.843 7.683 8.955C7.558 9.079 7.428 9.215 7.573 9.464C7.719 9.714 8.219 10.531 8.961 11.192C9.915 12.042 10.718 12.305 10.968 12.431C11.218 12.556 11.363 12.535 11.509 12.368C11.655 12.202 12.133 11.64 12.299 11.39C12.465 11.14 12.632 11.182 12.861 11.265C13.09 11.348 14.317 11.952 14.566 12.077C14.816 12.202 14.982 12.264 15.044 12.368C15.106 12.471 15.106 12.971 14.898 13.554Z" fill="black"/>
+                                    </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tags">
+                        Tags:&nbsp;<p>product design</p>,&nbsp;<p> culture</p>
+                    </div>
+                    <div class="border-dashed">
+                        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+                        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+                        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+                    </div>
+                    
+                    <div class="author-about">
+                        <img class="author-img" src="./image/author.png" alt="author">
+                        <p>
+                            <span>Mika Matikainen</span> is a Design Founder & Advisor, Berlin School of Creative Leadership Executive MBA participant, Zippie advisor, Wolt co-founder, and Nordic Rose stakeholder.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="border-vs-eye">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="82" height="65" viewBox="0 0 82 65" fill="none">
+                        <path d="M43.2857 32.8572C43.2857 41.3545 40.8575 49.0049 36.9827 54.5046C33.106 60.007 27.8445 63.2857 22.1429 63.2857C16.4412 63.2857 11.1797 60.007 7.30297 54.5046C3.4282 49.0049 1 41.3545 1 32.8572C1 24.3598 3.4282 16.7094 7.30297 11.2098C11.1797 5.70734 16.4412 2.42859 22.1429 2.42859C27.8445 2.42859 33.106 5.70734 36.9827 11.2098C40.8575 16.7094 43.2857 24.3598 43.2857 32.8572Z" fill="white" stroke="black" stroke-width="2"/>
+                        <path d="M81 31.4286C81 39.9259 78.5718 47.5763 74.697 53.076C70.8203 58.5784 65.5588 61.8571 59.8572 61.8571C54.1555 61.8571 48.894 58.5784 45.0173 53.076C41.1425 47.5763 38.7143 39.9259 38.7143 31.4286C38.7143 22.9312 41.1425 15.2808 45.0173 9.78117C48.894 4.27875 54.1555 1 59.8572 1C65.5588 1 70.8203 4.27875 74.697 9.78117C78.5718 15.2808 81 22.9312 81 31.4286Z" fill="white" stroke="black" stroke-width="2"/>
+                        <ellipse cx="25.5714" cy="45.1429" rx="8.57143" ry="12.1429" fill="black"/>
+                        <ellipse cx="63.2857" cy="45.1429" rx="8.57143" ry="12.1429" fill="black"/>
+                    </svg>
+                </div>
+                <div class="articles html3">
+                    <div class="articles-title">What to read next</div>
+                    <div class="article-list">
+                        <div class="article-item html3">
+                            <img class="article-item-img" src="./image/Rectangle 12.png"></img>
+                            <div class="article-item-desc">
+                                Here are some things you should know regarding how we work 
+                            </div>
+                        </div>
+                        <div class="article-item html3">
+                            <img class="article-item-img" src="./image/Rectangle 13.png"></img>
+                            <div class="article-item-desc">
+                                Granny gives everyone the finger, and other tips from OFFF Barcelona
+                            </div>
+                        </div>
+
+                        <div class="article-item html3">
+                            <img class="article-item-img" src="./image/Rectangle 13 (1).png"></img>
+                            <div class="article-item-desc">
+                                Hello world, or, in other words, why this blog exists
+                            </div>
+                        </div>
+                        <div class="article-item html3">
+                            <img class="article-item-img" src="./image/Rectangle 12 (1).png"></img>
+                            <div class="article-item-desc">
+                                Here are some things you should know regarding how we work 
+                            </div>
+                        </div>
+
+                        <div class="article-item html3">
+                            <img class="article-item-img" src="./image/Rectangle 14.png"></img>
+                            <div class="article-item-desc">
+                                Connecting artificial intelligence with digital product design
+                            </div>
+                        </div>
+                        <div class="article-item html3">
+                            <img class="article-item-img" src="./image/Rectangle 15.png"></img>
+                            <div class="article-item-desc">
+                                It’s all about finding the perfect balance
+                            </div>
+                        </div>
+
+                        <div class="article-item html3">
+                            <img class="article-item-img" src="./image/Rectangle 12 (1).png"></img>
+                            <div class="article-item-desc">
+                                I believe learning is the most important skill
+                            </div>
+                        </div>
+                        <div class="article-item html3">
+                            <img class="article-item-img" src="./image/Rectangle 13 (2).png"></img>
+                            <div class="article-item-desc">
+                                Clients are part of the team
+                            </div>
+                        </div>
+
+                        <div class="article-item html3">
+                            <img class="article-item-img" src="./image/Rectangle 19.png"></img>
+                            <div class="article-item-desc">
+                                Clients are part of the team
+                            </div>
+                        </div>
+                        <div class="article-item html3">
+                            <img class="article-item-img" src="./image/Rectangle 17.png"></img>
+                            <div class="article-item-desc">
+                                Here are some things you should know regarding how we work 
+                            </div>
+                        </div>
+
+                        <div class="article-item html3">
+                            <img class="article-item-img" src="./image/Rectangle 16.png"></img>
+                            <div class="article-item-desc">
+                                Connecting artificial intelligence with digital product design
+                            </div>
+                        </div>
+                        <div class="article-item html3">
+                            <img class="article-item-img" src="./image/Rectangle 18.png"></img>
+                            <div class="article-item-desc">
+                                How modern remote working tools get along with Old School Cowboy's methods
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="signup">
+                    <p class="signup-title">Sign up for the newsletter</p>
+                    <p class="signup-desc">If you want relevant updates occasionally, sign up for the private newsletter. Your email is never shared. </p>
+                    <div class="email">
+                        <input type="text" placeholder="Enter your email..."/>
+                        <button class="submit">Sign up</button>
+                    </div>
+                </div>
+            </div> 
+
+            <footer>
+                <div class="footer-head">
+                    <p>Digital product design</p>
+                    <p>Remote work</p>
+                    <p>UX design</p>
+                    <p>Distributed teams</p>
+                    <p>Creativity</p>
+                    <p>Strategy</p>
+                    <p>Suspense</p>
+                    <p>Growth</p>
+                </div>
+                <div class="logo-footer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="397" height="39" viewBox="0 0 397 39" fill="none">
+                        <path d="M1.46398 32H15.588V31.252L11.012 30.68C9.69198 30.504 8.72399 29.492 8.72399 28.128V7.05204L26.896 32H28.656V4.98404C28.656 3.66404 29.58 2.56404 30.9 2.38804L34.244 1.94804V1.20004H20.164V1.94804L24.74 2.52004C26.06 2.69604 27.028 3.70804 27.028 5.07204V25.4L12.772 5.55604C9.82399 1.42004 6.74398 1.20004 0.583984 1.20004V1.94804C3.26798 2.34404 5.90798 3.35604 7.05199 5.38004V28.216C7.05199 29.536 6.12798 30.636 4.80798 30.812L1.46398 31.252V32Z" fill="black"/>
+                        <path d="M59.059 32.704C68.387 32.704 75.295 26.192 75.295 16.6C75.295 7.00804 68.387 0.540039 59.059 0.540039C49.7309 0.540039 42.779 7.00804 42.779 16.6C42.779 26.192 49.7309 32.704 59.059 32.704ZM59.103 31.164C51.007 31.164 47.443 24.168 47.443 15.588C47.443 7.58004 51.183 2.08004 59.015 2.08004C66.935 2.08004 70.587 8.94404 70.587 17.26C70.587 25.532 67.243 31.164 59.103 31.164Z" fill="black"/>
+                        <path d="M98.3437 17.128H99.1357C103.668 29.668 111.412 35.3 115.856 38.072C109.608 29.536 106.396 23.904 103.536 16.732C108.904 15.808 111.852 13.3 111.852 8.94404C111.852 3.40004 106.836 1.20004 97.9037 1.20004H84.7037V1.94804L87.5197 2.30004C88.8397 2.47604 89.8077 3.48804 89.8077 4.85204V28.348C89.8077 29.712 88.8397 30.724 87.5197 30.9L84.7037 31.252V32H99.2677V31.252L96.4517 30.9C95.1317 30.724 94.1637 29.712 94.1637 28.348V17.128H98.3437ZM94.1637 2.74004H99.0037C104.988 2.74004 107.672 4.80804 107.672 9.16404C107.672 13.52 104.68 15.588 98.2997 15.588H94.1637V2.74004Z" fill="black"/>
+                        <path d="M123.883 32H138.007C148.919 32 155.915 26.456 155.915 16.688C155.915 6.43604 148.919 1.20004 138.007 1.20004H123.883V1.94804L126.699 2.30004C128.019 2.47604 128.987 3.48804 128.987 4.85204V28.348C128.987 29.712 128.019 30.724 126.699 30.9L123.883 31.252V32ZM135.631 30.46C134.311 30.46 133.343 29.712 133.343 28.348V2.74004H137.655C144.343 2.74004 151.251 5.51204 151.251 16.688C151.251 27.028 145.135 30.46 137.655 30.46H135.631Z" fill="black"/>
+                        <path d="M165.597 32H180.161V31.252L177.345 30.9C176.025 30.724 175.057 29.712 175.057 28.348V4.85204C175.057 3.48804 176.025 2.47604 177.345 2.30004L180.161 1.94804V1.20004H165.597V1.94804L168.413 2.30004C169.733 2.47604 170.701 3.48804 170.701 4.85204V28.348C170.701 29.712 169.733 30.724 168.413 30.9L165.597 31.252V32Z" fill="black"/>
+                        <path d="M206.292 32.66C211.396 32.66 216.852 30.724 220.416 27.38V25.048C216.984 28.26 212.276 29.888 207.612 29.888C200.704 29.888 195.028 24.872 195.028 16.6C195.028 7.93204 198.988 2.08004 206.292 2.08004C213.596 2.08004 216.412 7.49204 215.444 16.996H216.5L219.14 5.24804C216.632 2.38804 209.812 0.540039 206.292 0.540039C196.656 0.540039 190.144 7.00804 190.144 16.6C190.144 26.236 196.7 32.66 206.292 32.66Z" fill="black"/>
+                        <path d="M263.086 17.128H263.878C268.41 29.668 276.154 35.3 280.598 38.072C274.35 29.536 271.138 23.904 268.278 16.732C273.646 15.808 276.594 13.3 276.594 8.94404C276.594 3.40004 271.578 1.20004 262.646 1.20004H249.446V1.94804L252.262 2.30004C253.582 2.47604 254.55 3.48804 254.55 4.85204V28.348C254.55 29.712 253.582 30.724 252.262 30.9L249.446 31.252V32H264.01V31.252L261.194 30.9C259.874 30.724 258.906 29.712 258.906 28.348V17.128H263.086ZM258.906 2.74004H263.746C269.73 2.74004 272.414 4.80804 272.414 9.16404C272.414 13.52 269.422 15.588 263.042 15.588H258.906V2.74004Z" fill="black"/>
+                        <path d="M304.608 32.704C313.936 32.704 320.844 26.192 320.844 16.6C320.844 7.00804 313.936 0.540039 304.608 0.540039C295.28 0.540039 288.328 7.00804 288.328 16.6C288.328 26.192 295.28 32.704 304.608 32.704ZM304.652 31.164C296.556 31.164 292.992 24.168 292.992 15.588C292.992 7.58004 296.732 2.08004 304.564 2.08004C312.484 2.08004 316.136 8.94404 316.136 17.26C316.136 25.532 312.792 31.164 304.652 31.164Z" fill="black"/>
+                        <path d="M344.885 32.66C351.485 32.66 356.149 29.316 356.149 24.476C356.149 12.64 337.933 14.048 337.933 7.49204C337.933 4.36804 341.101 2.08004 345.809 2.08004C351.221 2.08004 353.245 4.98404 353.773 12.64H354.785L355.225 2.65204C352.629 1.50804 349.329 0.540039 345.809 0.540039C338.945 0.540039 334.677 3.62004 334.677 7.93204C334.677 19.416 352.981 17.612 352.981 25.136C352.981 28.656 349.373 31.12 345.325 31.12C339.649 31.12 337.361 28.084 336.305 19.372H335.293L334.413 29.8C337.449 31.472 340.265 32.66 344.885 32.66Z" fill="black"/>
+                        <path d="M367.155 32H395.095L396.414 21.616H395.667C392.983 28.568 391.135 30.46 387.219 30.46H378.902C377.582 30.46 376.615 29.712 376.615 28.348V17.128H386.954C388.142 17.128 389.33 17.964 389.418 19.108L389.902 24.256H390.651V8.90004H389.902L389.418 13.608C389.286 14.796 388.142 15.588 386.954 15.588H376.615V2.74004H386.339C389.595 2.74004 392.41 4.28004 394.171 11.628H394.918L394.039 1.20004H367.155V1.94804L369.97 2.30004C371.29 2.47604 372.259 3.48804 372.259 4.85204V28.348C372.259 29.712 371.29 30.724 369.97 30.9L367.155 31.252V32Z" fill="black"/>
+                    </svg>
+                </div>
+                <div class="footer-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Duis eu velit tempus erat egestas efficitur. In hac habitasse platea dictumst. 
+                    Fusce a nunc eget ligula.
+                </div>
+                <div class="footer-social">
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">RSS</a>
+                </div>
+                <div class="copy-right">
+                    © 2012–2020 Nordic Rose Co. <br/>
+                    All rights reserved. 
+                </div>
+            </footer>
+            <div class="redirect-link"> <<<< </div>
+        </div>
+    </body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        var redirectLink = document.querySelector('.redirect-link');
+    
+        redirectLink.addEventListener('click', function () {
+            window.location.href = 'http://127.0.0.1:5501/index2.html';
+        });
+        });
+    </script>
+</html>

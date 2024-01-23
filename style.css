@@ -1,0 +1,581 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    word-break: break-all;
+}
+
+@font-face {
+    font-family: 'SF Pro Text Regular';
+    src: url('./font/SF-Pro-Text-Font-Family/SF-Pro-Text-Regular.otf') format('truetype');
+  }
+  @font-face {
+    font-family: 'SF Pro Text bold';
+    src: url('./font/SF-Pro-Text-Font-Family/SF-Pro-Text-Bold.otf') format('truetype');
+  }
+  @font-face {
+    font-family: 'SF Pro Text light';
+    src: url('./font/SF-Pro-Text-Font-Family/SF-Pro-Text-Light.otf') format('truetype');
+  }
+  @font-face {
+    font-family: 'NewYorkExtraLargeRegular';
+    src: url('./font/FontsFree-Net-NewYorkExtraLargeRegular.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Basis Grotesque PRO';
+    src: url('./font/Basis-Grotesque-PRO/BasisGrotesqueArabicPro-Regular.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Harriet';
+    src: url('./font/harriet-text-cufonfonts/HARRIETTEXTREGULAR.OTF') format('truetype');
+  }
+  @font-face {
+    font-family: 'mackay bold';
+    src: url('./font/Rene-Bieder-Mackay-DEMO/Rene\ Bieder\ -\ Mackay\ DEMO\ Bold.otf') format('truetype');
+  }
+  @font-face {
+    font-family: 'New York small';
+    src: url('./font/new-york-font/NewYorkSmall-Medium.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'SF Mono';
+    src: url('./font/sf-mono-cufonfonts/SFMonoLight.otf') format('truetype');
+  }
+  @font-face {
+    font-family: "SF Pro Display";
+    src: url('./font/sf-pro-display-cufonfonts/SFPRODISPLAYREGULAR.OTF') format('truetype');
+  }
+header{
+    background-color: #FFD900;
+    height: 350px;
+    position: relative;
+}
+.header{
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.version{
+    font-family: 'Victor Mono', monospace;
+    font-size: 20px;
+}
+.readme{
+    font-size: 200px;
+
+}
+
+.content{
+    width: 80%;
+    margin: 70px auto 100px;
+}
+
+.title{
+    font-family: 'NewYorkExtraLargeRegular';
+    font-size: 44px;
+    font-weight: 700;
+    padding: 30px 0;
+}
+
+.desc{
+    padding: 0 26px;
+    font-style: 20px;
+    font-family: 'SF Pro Text', Arial, sans-serif;
+    border-left: 6px solid #000;
+    margin-bottom: 30px;
+}
+
+.subtitle1{
+    font-size: 44px;
+    padding: 30px 0 10px;
+}
+
+.subtitle2{
+    font-family: 'mackay bold';
+    font-size: 44px;
+    font-weight: 700;
+    padding: 30px 0 10px;
+
+}
+
+.subtitle5{
+    font-family: 'Harriet';
+    font-size: 44px;
+    font-weight: 700;
+    padding: 30px 0 10px;
+}
+
+.subtitle3{
+    font-family: 'Basis Grotesque PRO';
+    font-size: 44px;
+    font-weight: 700;
+    padding: 30px 0 10px;
+}
+
+.subtitle4{
+    padding: 30px 0 10px;
+    font-size: 48px;
+    font-family: 'Silkscreen', sans-serif;
+    font-weight: 700;
+}
+
+.redirect-link{
+    margin-left: 40px;
+}
+
+
+
+/* index2 ======================*/
+
+.header2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #E0E0E0;
+    padding: 0 60px;
+}
+
+.logo{
+    width: 397px;
+    height: 39px;
+}
+.header-menu{
+    display: none;
+}
+.logo svg {
+    display: block;  
+    width: 100%;     
+    height: 100%;    
+  }
+.header-nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px
+}
+.nav-item{
+    cursor: pointer;
+    font-family: 'new-york-small';
+    font-size: 20px;
+    padding: 40px 0;
+    font-weight: 500;
+}
+
+.content2{
+    width: 79.5%;
+    margin: 70px auto 0;
+}
+
+.img-banner{
+    display: block;
+    margin: auto;
+    width: 854px;
+    height: 533px;
+}
+
+.active{
+    border-bottom: 2px solid #000;
+}
+
+.content-title, .articles-title{
+    color: #000;
+    text-align: center;
+    font-family: "NewYorkExtraLargeRegular";
+    font-size: 3.375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; 
+    padding: 40px 0;
+    margin: 0 auto;
+    word-break: break-word;
+    width: 60%;
+}
+
+.content-subtitle{
+    width: 50%;
+    margin: auto;
+    color: #000;
+    text-align: center;
+    font-family: "SF Mono";
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+    word-break: break-word;
+}
+
+.border{
+    margin: 30px auto;
+    width: 60%;
+    border-top: 2px solid #000;
+}
+
+.articles{
+    margin: auto;
+    width: 60%;
+}
+
+.article-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.article-item{
+    cursor: pointer;
+    width: 48%;
+    margin-bottom: 60px;
+}
+
+.article-item-img{
+    width: 100%;
+}
+
+.article-item-desc{
+    margin: 16px auto 0;
+    width: 87%;
+    color: #000;
+    text-align: center;
+    font-family: "SF Pro Display";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    word-break: break-word;
+}
+footer{
+    background-color: #000;
+}
+.footer-head{
+    white-space: nowrap;
+    padding: 20px 0 90px;
+    overflow: hidden;
+
+}
+.footer-head p:nth-child(odd) {  /* vị trí lẻ */
+    display: inline-block;
+    color: #FFF;
+    font-family: 'SF Pro Text Regular';
+    font-size: 1.25rem;
+    font-style: normal;
+    line-height: 1.75rem; /* 140% */
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+}
+
+.footer-head p:nth-child(even) {
+    margin: 0 10px;
+    display: inline-block;
+    color: #FFF;
+    font-family: "SF Pro Text bold";
+    font-size: 1.25rem;
+    font-style: normal;
+    line-height: 1.75rem; /* 140% */
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+}
+
+
+.logo-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-footer svg{
+    width: 290px;
+    height: 27px;
+}
+
+.logo-footer svg path{
+    fill: white;
+}
+.footer-desc{
+    font-family: 'new-york-small';
+    padding: 24px 0 30px;
+    text-align: center;
+    width: 35%;
+    margin: auto;
+    color: white;
+    word-break: break-word;
+    font-size: 16px;
+}
+.footer-social{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+
+.footer-social a{
+    font-family: 'SF Pro Text Regular';
+    display: inline-block;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+    margin: 0 20px;
+}
+.copy-right{
+    text-align: center;
+    margin: auto;
+    padding-bottom: 30px;
+    color: white;
+    font-family: 'SF Pro Text Regular';
+    font-size: 12px;
+}
+
+
+/* index 3 =========== ===================*/
+
+.img-banner.html3{
+    width: 100%;
+    height: 50%;
+}
+.blog-html3{
+    width: 60%;
+    margin: auto;
+}
+.author{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    border-top: 2px solid;
+    margin: 30px auto;
+    align-items: center;
+}
+.author-profile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.author-img{
+    cursor: pointer;
+    border-radius: 50%;
+}
+.author-name{
+    font-family: 'SF Pro Text bold';
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+.author-time{
+    font-family: 'SF Pro Text light';
+    font-size: 16px;
+}
+.author-contact{
+    height: 44px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #eaeaea;
+    border-radius: 0.25rem;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.08);
+}
+
+.icon{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+    padding: 0 20px;
+}
+.icon.twitter{
+    border-left: 1px solid #eaeaea;
+}
+.icon.message{
+    border-left: 1px solid #eaeaea;
+    display: none;
+}
+.paragraph{
+    width: 75%;
+    margin: auto;
+    padding-top: 40px;
+    font-family: 'new-york-small';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 170%;
+    word-break: break-word;
+}
+.paragraph-li{
+    display: flex;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+    padding-top: 25px;
+    font-family: 'new-york-small';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 170%;
+    word-break: break-word;
+}
+.rhombus{
+    margin-right: 12px;
+    width: 0.375rem;
+    height: 0.375rem;
+    transform: rotate(45deg);
+    flex-shrink: 0;
+    background-color: #000;
+}
+.paragraph-title{
+    width: 75%;
+    margin: auto;
+    font-family: "SF Pro Display";
+    font-size: 32px;
+    font-weight: 700;
+    padding-top: 60px;
+}
+.blog-img{
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 16px;
+}
+.img-caption{
+    font-family: 'SF Pro Text regular';
+    font-size: 16px;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    word-break: break-word;
+    line-height: 140%;
+}
+.share{
+    font-family: 'SF Pro Text regular';
+    padding-top: 80px;
+    width: 75%;
+    margin: auto;
+}
+.share .author-contact .icon{
+    flex: 1;
+    justify-content: center;
+    font-family: 'SF Pro Text regular';
+    font-size: 16px;
+    gap: 16px;
+
+}
+.share .author-contact{
+    height: 60px;
+}
+.tags{
+    color: #0C0C0C;
+    display: flex;
+    font-family: 'SF Pro Text regular';
+    font-size: 16px;
+    padding: 30px 0;
+    width: 75%;
+    margin: auto;
+}
+.tags p{
+    border-bottom: 2px solid #0C0C0C;
+}
+.border-dashed{
+    white-space: nowrap;
+    overflow: hidden;
+    /* border: 1px dashed #000; */
+    width: 75%;
+    margin: auto;
+    font-size: 12px;
+}
+.author-about{
+    font-family: 'SF Pro Text regular';
+    font-size: 16px;
+    width: 75%;
+    margin: auto;
+    padding: 30px 0 80px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    color: #0C0C0C;
+    line-height: 1.6rem;
+    letter-spacing: 0.05rem;
+}
+.author-about span{
+    font-family: 'SF Pro Text bold';
+    color: #0C0C0C;
+    line-height: 1.6rem;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.author-about p{
+    word-break: break-word;
+}
+
+.content-subtitle.index3{
+    padding-bottom: 40px;
+}
+
+.border-vs-eye {
+    position: relative;
+    width: 100%;
+    border: 1px solid;
+    margin: 60px 0;
+}
+
+.border-vs-eye svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.articles.html3{
+    width: 80%;
+}
+.article-item.html3{
+    width: 31%;
+}
+
+.signup{
+    width: 45%;
+    text-align: center;
+    padding: 50px;
+    border-top:12px solid #000;
+    border-left:1px solid #000;
+    border-right:1px solid #000;
+    border-bottom:1px solid #000;
+    margin: 30px auto 100px;
+}
+
+.signup-title{
+    font-family: 'NewYorkExtraLargeRegular';
+    font-size: 36px;
+    font-weight: 700;
+    color: #090909;
+    padding: 10px 0;
+}
+
+.signup-desc{
+    font-family: 'SF Pro Text light';
+    font-size: 20px;
+    line-height: 28px;
+    color: #090909;
+    padding-bottom: 30px;
+}
+
+.email{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #000;
+}
+
+.email input{
+    line-height: 50px;
+    font-size: 20px;
+    outline: none;
+    width: 70%;
+    border: none;
+    padding-left: 16px;
+}
+.submit{
+    cursor: pointer;
+    font-family: 'SF Pro Text bold';
+    font-size: 20px;
+    width: 30%;
+    border: none;
+    background-color: #000;
+    color: white;
+}
