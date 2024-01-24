@@ -97,7 +97,9 @@ btnPrev.addEventListener('click', ()=> {
 })
 
 btnToday.addEventListener('click', () => {
-    location.reload()
+    currentMonth = new Date().getMonth()
+    currentYear = new Date().getFullYear()
+    displayInfo()
 })
 
 // Xử lý khi ấn vào nút next month
