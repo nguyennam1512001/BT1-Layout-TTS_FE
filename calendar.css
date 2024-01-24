@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.opacity{
+    color: #595559;
+}
+.container{
+    width: 60%;;
+    min-width: 400px;
+}
+.calendar{
+    color: #dedede;
+    margin-top: 60px;
+    padding-top: 20px;
+    background-color: #221E23;
+    border-radius: 14px;
+    overflow: hidden;
+}
+.upYear, .downYear{
+    cursor: pointer;
+    background-color: #5A565A;
+    color: #dedede;
+    padding: 3px 1.5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+p{
+    padding: 0;
+    margin: 0;
+}
+.month, .year{
+    font-size: 30px;
+    font-weight: 200;
+    cursor: default;
+}
+.year{
+    width: 72px;
+}
+.weekend{
+    color: #9B9A9C;
+}
+.prev-month, .today, .next-month{
+    background-color: #5A565A;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 14.5px;
+    margin-left: 1px;
+    line-height: 1.3;
+    cursor: default;
+}
+.day,
+.day-name {
+    flex-basis: calc(100% / 7);
+    font-size: 1.5rem;
+    text-align: end;
+    font-size: 16px;
+    cursor: default;
+}
+.day-name{
+    margin-right: 10px;
+}
+.day{
+    border: 1px solid #404040;
+    display: flex;
+    align-items: flex-start;
+    justify-content: end;
+    min-height: 60px;
+}
+.day.active p{
+    background-color: #FF453A;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    margin: 2px;
+    cursor: default;
+    color: black;
+}
+.day p{
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    margin: 2px;
+}
+.day span{
+    margin-top: 2px;
+    margin-right: 10px;
+}
+.day + span{
+background-color: red;
+    /* CSS styles cho thẻ p khi thẻ span là em trực tiếp của nó */
+}
+
+
+.date-container .day:nth-child(7n), .day:nth-child(7n-1){
+    background-color: #29272A;
+}

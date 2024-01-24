@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="calendar.css">
+    <link rel="shortcut icon" href="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678116-calendar-512.png" type="image/x-icon">
+    <title>Calendar</title>
+</head>
+<body>
+    <div class="container">
+        <div class="calendar row">
+            <div class="month-year col-5 px-0 d-flex align-items-center">
+                <span class="month fs-3 fw-bold ms-3">January</span>&nbsp;
+                <div class="year">2024</div>&nbsp;&nbsp;
+                <div class="d-inline-block">
+                    <i class="fa-solid fa-angle-up upYear"></i><br/>
+                    <i class="fa-solid fa-angle-down downYear"></i>
+                </div>
+            </div>
+            <div class="col-7 text-end px-0 d-flex justify-content-end align-items-center">
+                <div class="prev-month"><i class="fa-solid fa-chevron-left"></i></div>
+                <p class="today">Today</p>
+                <div class="next-month me-3"><i class="fa-solid fa-chevron-right"></i></div>
+            </div>
+            <div class="calendar-body px-0 pt-3">
+                <div class="date d-flex px-0">
+                    <div class="day-name" >Mon</div>
+                    <div class="day-name">Tue</div>
+                    <div class="day-name">Wen</div>
+                    <div class="day-name">Thu</div>
+                    <div class="day-name">Fri</div>
+                    <div class="day-name weekend">Sat</div>
+                    <div class="day-name weekend">Sun</div>
+                </div>
+                <div class="date date-container d-flex flex-wrap px-0">
+                    <div class="day" style="width: 10px;"><p></p></div>
+                    <div class="day"><p></p></div>
+                    <div class="day"><p>1</p></div>
+                    <div class="day"><p>2</p></div>
+                    <div class="day"><p>3</p></div>
+                    <div class="day"><p>4</p></div>
+                    <div class="day"><p>5</p></div>
+                    <div class="day"><p>6</p></div>
+                    <div class="day"><p>7</p></div>
+                    <div class="day"><p>8</p></div>
+                    <div class="day"><p>9</p></div>
+                    <div class="day active"><p>10</p><span></span></div>
+                    <div class="day"><p>11</p></div>
+                    <div class="day"><p>12</p></div>
+                    <div class="day"><p>13</p></div>
+                    <div class="day"><p>14</p></div>
+                    <div class="day"><p>15</p></div>
+                    <div class="day"><p>16</p></div>
+                    <div class="day"><p>17</p></div>
+                    <div class="day"><p>18</p></div>
+                    <div class="day"><p>19</p></div>
+                    <div class="day"><p>20</p></div>
+                    <div class="day"><p>21</p></div>
+                    <div class="day"><p>22</p></div>
+                    <div class="day"><p>23</p></div>
+                    <div class="day"><p>24</p></div>
+                    <div class="day"><p>25</p></div>
+                    <div class="day"><p>26</p></div>
+                    <div class="day"><p>27</p></div>
+                    <div class="day"><p>28</p></div>
+                    <div class="day"><p>29</p></div>
+                    <div class="day"><p>30</p></div>
+                    <div class="day"><p>31</p></div>
+                    <div class="day"><p>1</p></div>
+                    <div class="day"><p>2</p></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./calendar.js"></script>
+</body>
+</html>
