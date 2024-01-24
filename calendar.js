@@ -70,7 +70,10 @@ function renderDate(nameCurrentMonth,nameNextMonth ) {
 
     for (let i = 0; i < daysInMonth; i++) {
         dateEle.innerHTML += `
-            <div class="day ${activeCurrentDay(i + 1)}"><p style=${i === 0 ? "width:10px;" : ''}>${i + 1}</p><span>${i === 0 ? nameCurrentMonth : ''}</span></div>
+            <div class="day ${activeCurrentDay(i + 1)}" style="${i == 0 ? 'padding: 2px 10px 0 0;' : ''}">
+                <p style="${i === 0 ? 'width:10px; margin: 0' : ''}">${i + 1}</p>
+                ${i === 0 ? nameCurrentMonth : ''}
+            </div>
         `;
     }
 
@@ -79,8 +82,10 @@ function renderDate(nameCurrentMonth,nameNextMonth ) {
     // Thêm các ô div còn lại
     for (let i = 0; i < remainingDays; i++) {
         dateEle.innerHTML += `
-            <div class="day opacity"><p style=${i === 0 ? "width:10px;" : ''}>${i + 1}</p><span>${i === 0 ? nameNextMonth : ''}</span></div>
-
+        <div class="day opacity" style="${i == 0 ? 'padding: 2px 10px 0 0;' : ''}">
+            <p style="${i === 0 ? 'width: 10px; margin: 0' : ''}">${i + 1}</p>
+            ${i === 0 ? nameNextMonth : ''}
+        </div>     
         `;
     }
 }
