@@ -4,8 +4,13 @@ let btnPrev = document.querySelector('.prev-month')
 let btnNext = document.querySelector('.next-month')
 let dateEle = document.querySelector('.date-container')
 let btnToday = document.querySelector('.today')
-let btnPrevYear = document.querySelector('.upYear')
 let btnNextYear = document.querySelector('.downYear')
+let closeBtn = document.querySelector('.close');
+let downYearBtn = document.querySelector('.downYear');
+let yearPopup = document.querySelector('.year-popup');
+let listYear = document.querySelector('.list-year')
+let prevYear = document.querySelector('.prev-year')
+let nextYear = document.querySelector('.next-year')
 
 let currentMonth = new Date().getMonth()
 let currentYear = new Date().getFullYear()
@@ -62,7 +67,7 @@ function renderDate(nameCurrentMonth,nameNextMonth ) {
     let DayPrevMonth = getDayPrevMonth()
 
 
-    for (let i = startDay; i > 1; i--) {
+    for (let i = startDay; i > 0; i--) {
         dateEle.innerHTML += `
             <div class="day opacity"><p>${DayPrevMonth - i + 1}</p></div>
         `;
@@ -78,7 +83,8 @@ function renderDate(nameCurrentMonth,nameNextMonth ) {
     }
 
     // Tính toán số ngày còn lại trong tuần
-    let remainingDays = 8 - (startDay + daysInMonth) % 7;
+    let remainingDays = 7 - (startDay + daysInMonth) % 7;
+    console.log(remainingDays , startDay , daysInMonth);
     // Thêm các ô div còn lại
     for (let i = 0; i < remainingDays; i++) {
         dateEle.innerHTML += `
@@ -148,15 +154,61 @@ document.addEventListener('wheel', (event) => {
 }, { passive: false });
 
 
-btnPrevYear.addEventListener('click', ()=>{
-    currentYear--
-    displayInfo()
+// popup ===========
+var year = currentYear
+function getYears (yearPop) {
+    listYear.innerHTML = '';
+
+    for (let i = yearPop - 8; i < yearPop + 8; i++) {
+        listYear.innerHTML += `
+            <div class="item-year col-3 ${currentYear === i ? 'activPopup' : ''}">${i}</div>
+        `
+    }
+    let listItemYear = document.querySelectorAll('.item-year')
+    listItemYear.forEach(itemYear => {
+        itemYear.addEventListener('click', function () {
+            const iValue = parseInt(this.textContent);
+
+            currentYear = iValue;
+
+            yearPopup.classList.remove('activePopup');
+
+            displayInfo()
+        });
+    });
+
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    closeBtn.addEventListener('click', function () {
+        yearPopup.classList.remove('activePopup');
+});
+
+document.addEventListener('click', function (event) {
+    if (!yearPopup.contains(event.target) && event.target !== downYearBtn) {
+        yearPopup.classList.remove('activePopup');
+    }
+});
+
+downYearBtn.addEventListener('click', function () {
+        yearPopup.classList.add('activePopup');
+        let year = currentYear
+        getYears(year)
+    });
+});
+
+prevYear.addEventListener('click', () => {
+    year -= 16
+    getYears(year)
 })
 
-btnNextYear.addEventListener('click', ()=>{
-    currentYear++
-    displayInfo()
+
+nextYear.addEventListener('click', () => {
+    year += 16
+    getYears(year)
 })
 
 
-window.onload = displayInfo()
+window.onload = () => {
+    displayInfo()
+} 

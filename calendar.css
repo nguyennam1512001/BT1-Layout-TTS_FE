@@ -31,6 +31,72 @@ p{
     padding: 0;
     margin: 0;
 }
+.month-year{
+    position: relative;
+}
+.year-popup{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 100%;
+    right: -80%;
+    width: 100%;
+    border: 1px solid #404040;
+    background-color: #28262A;
+    border-radius: 14px;
+    color: #dedede;
+    padding: 50px 10px 10px;
+    box-shadow: 0 0 10px #48454b;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, transform 0.3s;
+}
+.year-popup.activePopup{
+    opacity: 1;
+    visibility: visible;
+}
+.title-popup{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 16px;
+}
+.close{
+    background-color: #5A565A;
+    border-radius: 50%;
+    position: absolute;
+    top: 6px;
+    right: 12px;
+    padding: 0 7px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.list-year{
+    border-top: 1.5px solid #404040;
+    background-color: #323035;
+    border-radius: 10px;
+}
+.prev-year{
+    font-size: 20px;
+    margin-right: 16px;
+    display: block;
+    cursor: pointer;
+}
+.next-year{
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 16px;
+    display: block;
+}
+.item-year{
+    text-align: center;
+    cursor: pointer;
+    margin: 10px 0;
+}
 .month, .year{
     font-size: 30px;
     font-weight: 200;
@@ -90,12 +156,13 @@ p{
     margin-top: 2px;
     margin-right: 10px;
 }
-.day + span{
-background-color: red;
-    /* CSS styles cho thẻ p khi thẻ span là em trực tiếp của nó */
-}
-
 
 .date-container .day:nth-child(7n), .day:nth-child(7n-1){
     background-color: #29272A;
+}
+
+.activ, .activPopup{
+    background-color: #FF453A;
+    color: black;
+    border-radius: 10px;
 }
