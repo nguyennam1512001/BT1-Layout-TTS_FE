@@ -4,13 +4,16 @@ let btnPrev = document.querySelector('.prev-month')
 let btnNext = document.querySelector('.next-month')
 let dateEle = document.querySelector('.date-container')
 let btnToday = document.querySelector('.today')
-let btnNextYear = document.querySelector('.downYear')
 let closeBtn = document.querySelector('.close');
+let closeMonth = document.querySelector('.closeMonth');
 let downYearBtn = document.querySelector('.downYear');
 let yearPopup = document.querySelector('.year-popup');
+let monthPopup = document.querySelector('.month-popup');
 let listYear = document.querySelector('.list-year')
+let listMonth = document.querySelector('.list-month')
 let prevYear = document.querySelector('.prev-year')
 let nextYear = document.querySelector('.next-year')
+let month = document.querySelector('.month')
 
 let currentMonth = new Date().getMonth()
 let currentYear = new Date().getFullYear()
@@ -154,7 +157,7 @@ document.addEventListener('wheel', (event) => {
 }, { passive: false });
 
 
-// popup ===========
+// year popup ===========
 var year = currentYear
 function getYears (yearPop) {
     listYear.innerHTML = '';
@@ -179,22 +182,53 @@ function getYears (yearPop) {
 
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    closeBtn.addEventListener('click', function () {
-        yearPopup.classList.remove('activePopup');
-});
+// month popup ===========
+var curMonth = currentMonth
+function getMonths () {
+    listMonth.innerHTML = '';
+    let monthArr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    for (let i =  0; i < monthArr.length; i++) {
+        listMonth.innerHTML += `
+            <div class="item-year col-3 ${currentMonth === i ? 'activPopup' : ''}">${monthArr[i]}</div>
+        `
+    }
+    let listItemMonth = document.querySelectorAll('.item-year')
+    listItemMonth.forEach((itemMonth, i )=> {
+        itemMonth.addEventListener('click', function () {
+
+            currentMonth = i;
+
+            monthPopup.classList.remove('isOpenMonth');
+
+            displayInfo()
+        });
+    });
+
+}
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     closeBtn.addEventListener('click', function () {
+//         yearPopup.classList.remove('activePopup')
+//     })
+//     closeMonth.addEventListener('click', function(){
+//         monthPopup.classList.remove('isOpenMonth')
+
+//     })
+// });
 
 document.addEventListener('click', function (event) {
     if (!yearPopup.contains(event.target) && event.target !== downYearBtn) {
         yearPopup.classList.remove('activePopup');
     }
+    if (!monthPopup.contains(event.target) && event.target !== month) {
+        monthPopup.classList.remove('isOpenMonth');
+    }
 });
 
 downYearBtn.addEventListener('click', function () {
-        yearPopup.classList.add('activePopup');
-        let year = currentYear
-        getYears(year)
-    });
+    yearPopup.classList.add('activePopup');
+    let year = currentYear
+    getYears(year)
 });
 
 prevYear.addEventListener('click', () => {
@@ -212,3 +246,10 @@ nextYear.addEventListener('click', () => {
 window.onload = () => {
     displayInfo()
 } 
+
+
+// open popup tháng
+month.addEventListener('click', function(){
+    monthPopup.classList.add('isOpenMonth')
+    getMonths()
+})

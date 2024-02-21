@@ -34,7 +34,7 @@ p{
 .month-year{
     position: relative;
 }
-.year-popup{
+.year-popup, .month-popup{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -52,7 +52,7 @@ p{
     visibility: hidden;
     transition: opacity 0.3s, transform 0.3s;
 }
-.year-popup.activePopup{
+.year-popup.activePopup, .month-popup.isOpenMonth{
     opacity: 1;
     visibility: visible;
 }
@@ -64,7 +64,7 @@ p{
     padding-top: 10px;
     font-size: 16px;
 }
-.close{
+.close, .closeMonth{
     background-color: #5A565A;
     border-radius: 50%;
     position: absolute;
@@ -75,10 +75,13 @@ p{
     cursor: pointer;
 }
 
-.list-year{
+.list-year, .list-month{
     border-top: 1.5px solid #404040;
     background-color: #323035;
     border-radius: 10px;
+}
+.list-month{
+    margin: 0 10px;
 }
 .prev-year{
     font-size: 20px;
@@ -100,10 +103,13 @@ p{
 .month, .year{
     font-size: 30px;
     font-weight: 200;
-    cursor: default;
+}
+.month{
+    cursor: pointer;
 }
 .year{
     width: 72px;
+    cursor: default;
 }
 .weekend{
     color: #9B9A9C;
