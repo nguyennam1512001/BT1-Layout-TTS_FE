@@ -206,15 +206,15 @@ function getMonths () {
 
 }
 
-// document.addEventListener('DOMContentLoaded', function () {
-//     closeBtn.addEventListener('click', function () {
-//         yearPopup.classList.remove('activePopup')
-//     })
-//     closeMonth.addEventListener('click', function(){
-//         monthPopup.classList.remove('isOpenMonth')
+document.addEventListener('DOMContentLoaded', function () {
+    closeBtn.addEventListener('click', function () {
+        yearPopup.classList.remove('activePopup')
+    })
+    closeMonth.addEventListener('click', function(){
+        monthPopup.classList.remove('isOpenMonth')
 
-//     })
-// });
+    })
+});
 
 document.addEventListener('click', function (event) {
     if (!yearPopup.contains(event.target) && event.target !== downYearBtn) {
